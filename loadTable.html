@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="loadTable">
+	<head>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="loadTable.js"></script>
+		<style>
+			table {width: 100%; }
+			tr {text-align: left; color: #000; vertical-align: top;}
+			td:first-child {width: 70px; color: #aaa;}
+		</style>
+	</head>
+  <body ng-controller="MainControler">
+   <table border="0" cellspacing="0" cellpadding="0">
+   <tr ng-repeat="content in contents">
+	<td >{{content.userId}}:{{content.id}}</td><td>{{content.title}}<br ng-show="content.completed"></br></td>
+	</tr>
+	</table>
+  </body>
+</html>
