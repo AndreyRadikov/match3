@@ -7,12 +7,13 @@
 			table {width: 100%; }
 			tr {text-align: left; color: #000; vertical-align: top;}
 			td:first-child {width: 70px; color: #aaa;}
+			td:last-child {width: 20px; text-align: right;}
 		</style>
 	</head>
   <body ng-controller="MainControler">
    <table border="0" cellspacing="0" cellpadding="0">
    <tr ng-repeat="content in contents">
-	<td >{{content.userId}}:{{content.id}}</td><td>{{content.title}}<br ng-show="content.completed"></br></td>
+	<td >{{content.userId}}:{{content.id}}</td><td>{{content.title}}</td><td><input type="checkbox" ng-checked="content.completed"></input></td>
 	</tr>
 	</table>
   </body>
